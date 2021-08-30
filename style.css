@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --softMagenta: #E882E8;
+  --violet: #674BAF;
+}
+
+/* GENERAL */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: url('images/bg-desktop.svg') no-repeat center center fixed, var(--violet);
+  background-size: cover;
+  color: white;
+  line-height: 1.5;
+  padding: 2em 5em;
+  font-size: 1em;
+  display: grid;
+  grid-template-rows: 5vh 80vh 5vh;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+/* HEADER */
+header img {
+  align-self: start;
+}
+
+
+/* MAIN */
+.container {
+  margin: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content:  center;
+  align-items: center;
+  gap: 2em;
+}
+
+/* Mockup Image */
+.image img {
+  width: 100%;
+}
+
+/* Main content */
+.main-content h1 {
+  width: 20vw;
+  margin-bottom: 1em;
+}
+.main-content {
+  width: 24vw;
+  align-self: flex-start;
+  margin-top: 2em;
+}
+
+/* Register button */
+.register {
+  background-color: white;
+  padding: 1rem 4rem;
+  border: none;
+  color: var(--violet);
+  border-radius: 1.5rem;
+  box-shadow: .2rem .2rem .7em rgba(0,0,0,.4);
+  margin: 1em 0;
+}
+
+/* FOOTER */
+/* Social btns */
+.btn-social {
+  border: 2px solid white;
+  border-radius: 2rem;
+  display: inline;
+  padding: 1rem;
+  width: 50px;
+  height: 50px;
+  margin: .5rem;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+footer {
+  justify-self: end;
+}
+.attribution {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:1050px) {
+  body {
+    padding-left: 0; 
+    font-size: .9rem;
+  }
+}
+@media screen and (max-width:950px) {
+  body {
+    font-size: .8rem;
+  }
+}
+@media screen and (max-width:750px) {
+  body {
+    font-size: .7rem;
+  }
+}
+@media screen and (max-width:600px) {
+  body {
+    background: url('images/bg-mobile.svg') no-repeat fixed, var(--violet);
+    padding-left: 2em;
+    grid-template-rows: 5vh 70vh 10vh;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .main-content h1 {
+    width: inherit;
+    text-align: center;
+    margin: 1em 0 0 -1em;
+  }
+  .main-content {
+    width: 130%;
+    text-align: center;
+    align-self: auto;
+    margin-top: .5em;
+
+  }
+  .image img {
+    width: 100%;
+    transform: scale(1.5);
+    margin-top: 2em;
+  }
+  header img {
+    max-width: 35%;
+    padding: 2em;
+  }
+  footer {
+    justify-self: center;
+  }
+}
